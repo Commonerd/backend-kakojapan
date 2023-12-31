@@ -3,8 +3,8 @@ package model
 import "time"
 
 type Image struct {
-	ID          uint      `json:"id" gorm:"primaryKey"`
-	UserID      string    `json:"user_id" gorm:"unique"`
+	ID uint `json:"id" gorm:"primaryKey"`
+	//UserID      string    `json:"user_id" gorm:"unique"`
 	Title       string    `json:"title" gorm:"unique"`
 	Description string    `json:"description"`
 	Lat         float64   `json:"lat"`
@@ -15,7 +15,7 @@ type Image struct {
 }
 
 type ImageResponse struct {
-	ID     uint   `json:"id" gorm:"primaryKey"`
-	UserID string `json:"user_id" gorm:"unique"`
-	Title  string `json:"title" gorm:"unique"`
+	ID uint `json:"id" gorm:"primaryKey"`
+	//UserID string `json:"user_id" gorm:"unique"`
+	Title string `json:"title" gorm:"unique"`
 }
